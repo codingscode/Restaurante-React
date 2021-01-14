@@ -2,13 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dados.json",
   "dependencies": {
     "json-server": "0.16.3"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "json-server -p 8081 dados.json",
+    "start": "json-server --watch -p 8081 dados.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
