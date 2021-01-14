@@ -1,8 +1,19 @@
 
 
-digitar na pasta frontend:
+
+digitar no terminal da pasta backend:
+        npm i json-server
+        npm start
+        ver :
+             http://localhost:8081
+             http://localhost:8081/mensagem
+
+
+
+
+digitar no terminal da pasta frontend:
         npx create-react-app restaurante--app
-        
+        npm start
 
 
 
