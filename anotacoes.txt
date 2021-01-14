@@ -2,21 +2,21 @@
 
 
 digitar no terminal da pasta backend:
-        npm i json-server
-        npm start
-        ver :
-             http://localhost:8081
-             http://localhost:8081/mensagem
-
-
+        
 
 
 digitar no terminal da pasta frontend:
         npx create-react-app restaurante--app
         npm start
+        npm i concurrently
+        npm i json-server
+        npm i nodemon
+        npm run dev
 
 
 
+
+no arquivo dados.json é configurado para gerar o arquivo dados.json vazio antes.
 
 
 
