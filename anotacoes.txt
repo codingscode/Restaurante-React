@@ -1,0 +1,12 @@
+
+
+digitar na pasta frontend:
+        npx create-react-app restaurante--app
+        
+
+
+
+
+
+
+
