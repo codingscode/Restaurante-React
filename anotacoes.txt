@@ -19,4 +19,14 @@ digitar no terminal da pasta frontend:
 no arquivo dados.json é configurado para gerar o arquivo dados.json vazio antes.
 
 
+ver:
+     http://localhost:8081
+     http://localhost:8081/mensagem
+
+
+
+
+
+
+
 

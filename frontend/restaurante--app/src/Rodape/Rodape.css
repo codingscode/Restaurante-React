@@ -1,0 +1,17 @@
+.rodape_base {
+    
+    height: 8vh;
+    width: 100%;
+    background-color: lightblue;
+    font-size: 21px;
+    color: #FFF;
+    margin-top: 80px;
+}
+
+.rodape_inf1 {
+    
+    margin-left: 10px;
+    
+}
+
+
