@@ -1,11 +1,20 @@
 * {
     margin: 0;
-   
+    position: relative;
+    box-sizing: border-box;
+    
+    /* border: 6px solid pink; */
 }
+
+
 
 .app-1 {
-    height: 73.31vh;
+    
+    
+    
 }
 
-
+.app-2 {
+   height: 80vh;
+}
 

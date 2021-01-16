@@ -5,14 +5,36 @@
      background-color: chocolate;
      font-size: 21px;
      color: #FFF;
+     align-content: center;
+     margin: 0;
+     flex-direction: column;
+     border: 1px solid yellow;
      
+     /* justify-content: stretch;
+    align-items: stretch;
+    align-self: center;
+    align-content: center; */
 }
 
 .cabecalho_inf1 {
-     position: absolute;
+     position: relative;
      margin-left: 10px;
-     margin-top: 17px;
+     padding: 30px auto 20px auto;
+     border: 1px solid white;
+     
+
 }
+
+.cabecalho_inf2 {
+     display: inline-block;
+     margin: 10px 6px;
+}
+
+
+
+
+
+
 
 
 
