@@ -8,13 +8,20 @@
 
 
 
-.app-1 {
-    
+.app-1 > * {
+    display: list-item;
     
     
 }
 
 .app-2 {
    height: 80vh;
+   
 }
+
+.app-2 > * {
+   padding-left: 20px;
+   padding-top: 20px;
+}
+
 

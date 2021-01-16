@@ -21,14 +21,17 @@
      margin-left: 10px;
      padding: 30px auto 20px auto;
      border: 1px solid white;
-     
-
 }
 
-.cabecalho_inf2 {
+.cabecalho_inf1 > * {
      display: inline-block;
      margin: 10px 6px;
 }
+
+/* .cabecalho_inf2 {
+     display: inline-block;
+     margin: 10px 6px;
+} */
 
 
 
