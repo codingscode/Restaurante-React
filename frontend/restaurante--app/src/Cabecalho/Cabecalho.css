@@ -1,6 +1,6 @@
 .cabecalho_base {
      position: relative;
-     height: 8vh;
+     height: 60px;
      width: 100%;
      background-color: chocolate;
      font-size: 21px;
@@ -10,15 +10,12 @@
      flex-direction: column;
      border: 1px solid yellow;
      
-     /* justify-content: stretch;
-    align-items: stretch;
-    align-self: center;
-    align-content: center; */
+     
 }
 
 .cabecalho_inf1 {
      position: relative;
-     margin-left: 10px;
+     left: 10px;
      padding: 30px auto 20px auto;
      border: 1px solid white;
 }

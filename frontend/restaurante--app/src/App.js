@@ -4,12 +4,67 @@ import Rodape from './Rodape/Rodape'
 
 export default function App() {
 
+      
+
       return (
-        <div className="app-1">
+        <div className="painel--geral">
             <Cabecalho />
-            <div className="app-2">
-                <div >Restaurante XXX</div>
-                <div >Oi React! Aplicação em Restaurante</div>
+            <div className="painel--geral_meio">
+                <div className="titulo">Restaurante Panela de Barro</div>
+                <div className="grid-container">
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                    <div>Aqui é o conteúdo</div>
+                </div>
+                <div></div>
             </div>
             <Rodape />
         </div>

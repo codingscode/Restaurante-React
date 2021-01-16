@@ -6,22 +6,96 @@
     /* border: 6px solid pink; */
 }
 
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('./fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('./fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url('./fonts/OpenSans-Italic.ttf');
+}
 
 
-.app-1 > * {
+.painel--geral > * {
     display: list-item;
-    
+    position: relative; 
     
 }
 
-.app-2 {
+.painel--geral_meio {
    height: 80vh;
+   font-family: 'Open Sans Bold';
+   font-size: 18px;
    
 }
 
-.app-2 > * {
+.painel--geral_meio > * {
    padding-left: 20px;
    padding-top: 20px;
+   bottom: 0;
 }
+
+.titulo {
+    text-align: center;
+    border: 2px solid blue;
+    padding-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+  
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

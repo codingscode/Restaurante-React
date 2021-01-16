@@ -1,6 +1,6 @@
 {
     "restaurante_produtos": {
-             "comidas": [
+            "comidas": [
                 {"id": 1, "nome": "Arroz", "preco_unidade": 10, "imagem_endereco": "", "descricao": "O arroz (Oryza sativa) é uma planta da família das gramíneas. Durante muitos anos, os grãos dessas plantas constituíram a base alimentar de muitos povos em todo o mundo. Hoje em dia não é diferente, a cultura do arroz é a terceira maior do mundo"},
                 {"id": 2, "nome": "Feijão preto", "preco_unidade": 10, "imagem_endereco": "", "descricao": "O feijão preto é rico em ferro, que é o nutriente necessário para combater a anemia ferropriva, mas para melhorar a absorção do ferro que está nele é importante acompanhar a refeição, que tem feijão preto, com suco de frutas cítricas, como suco de laranja natural, ou comer frutas como morango, kiwi ou mamão, como sobremesa, porque estas frutas são ricas em vitamina C que melhora a absorção do ferro."},
                 {"id": 3, "nome": "Feijão sempre verde", "preco_unidade": 10, "imagem_endereco": "", "descricao": "Com poucas calorias, muita água e fibras, o alimento ajuda no emagrecimento devido o seu efeito depurativo e a regulação do aparelho intestinal, melhorando o trânsito e eliminando da prisão de ventre e inchaços derivados dela. Ajuda também na eliminação da retenção de líquidos."},
@@ -46,7 +46,7 @@
                 {"id": 43, "nome": "Escondidinho", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 44, "nome": "Filé Mignon Grelhado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 45, "nome": "Arroz com jabá", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""}
-             ]
+            ]
             ,
             "bebidas": [
                 {"id": 46, "nome": "Pão de queijo", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
@@ -81,7 +81,7 @@
                 {"id": 72, "nome": "Suco de uva", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 73, "nome": "Suco de laranja", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 74, "nome": "Água de coco", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""}
-             ]
+            ]
     },
     "carrinho": [],
     "pedidos_realizados": []
