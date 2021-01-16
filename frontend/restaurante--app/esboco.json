@@ -1,6 +1,5 @@
 {
-    "restaurante_produtos": [
-        {
+    "restaurante_produtos": {
              "comidas": [
                 {"id": 1, "nome": "Arroz", "preco_unidade": 10, "imagem_endereco": "", "descricao": "O arroz (Oryza sativa) é uma planta da família das gramíneas. Durante muitos anos, os grãos dessas plantas constituíram a base alimentar de muitos povos em todo o mundo. Hoje em dia não é diferente, a cultura do arroz é a terceira maior do mundo"},
                 {"id": 2, "nome": "Feijão preto", "preco_unidade": 10, "imagem_endereco": "", "descricao": "O feijão preto é rico em ferro, que é o nutriente necessário para combater a anemia ferropriva, mas para melhorar a absorção do ferro que está nele é importante acompanhar a refeição, que tem feijão preto, com suco de frutas cítricas, como suco de laranja natural, ou comer frutas como morango, kiwi ou mamão, como sobremesa, porque estas frutas são ricas em vitamina C que melhora a absorção do ferro."},
@@ -15,25 +14,25 @@
                 {"id": 11, "nome": "Salada Grega", "preco_unidade": 10, "imagem_endereco": "", "descricao": "ela também é rica em gorduras boas e vitaminas, além de não ser calórica. É um ótimo acompanhamento para carnes brancas, como frango e peixe, ou até mesmo como uma entrada leve e neutra. Mas vai muito bem sozinha, hein? Não se engane! Geladinha, é uma ótima pedida para os dias quentes que estão por vir"},
                 {"id": 12, "nome": "Peito de Frango Assado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 13, "nome": "Mocotó", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É através do caldo de Mocotó que conseguimos obter Colágeno de alto valor biológico. Uma proteína que dá o aspecto gelatinoso ao caldo e para o nosso corpo oferece aminoácidos essenciais com benefícios antienvelhecimentos, melhorando o sistema imunológico, a pele, cabelos, unhas, ossos e juntas. É do tutano que são fornecidas gorduras boas, vitaminas A, D, E e K, que são poderosos antioxidantes, minerais como o zinco que beneficia o sistema nervoso central, também o cálcio, fósforo, magnésio, sódio e potássio."},
-                {"id": 14, "nome": "Buchada de Bode", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 15, "nome": "Farofa", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 16, "nome": "Pescada", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 17, "nome": "Macarrão", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 18, "nome": "Salada Comum", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 19, "nome": "Batata Frita", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 20, "nome": "Torta de camarão", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 21, "nome": "Acarajé", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 22, "nome": "Bife acebolado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 23, "nome": "Bife à cavalo", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 24, "nome": "Fígado frito", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 25, "nome": "Purê de batata", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 26, "nome": "Lasanha", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
+                {"id": 14, "nome": "Buchada de Bode", "preco_unidade": 10, "imagem_endereco": "", "descricao": "Em todo o Nordeste, a buchada é feita com as entranhas (rins, fígado e vísceras) do bode, lavadas, fervidas, cortadas, temperadas e cozidas em bolsas (que medem cerca de 8 cm de diâmetro), feitas com o próprio estômago do animal. No Nordeste, mais rigorosamente, a buchada leva apenas as chamadas vísceras brancas — as tripas e as outras partes do estômago que não foram utilizadas para fazer as bolsas. As vísceras vermelhas, como o coração, rins, pulmões, fígado e o baço (preparo à passarinha), compõem um prato diferente, o sarrabulho ou sarapatel, dependendo da espécie de animal."},
+                {"id": 15, "nome": "Farofa", "preco_unidade": 10, "imagem_endereco": "", "descricao": "A farinha de mandioca é conhecida por favorecer o ganho de peso por ser rica em carboidratos, e como não te fibras não gera saciedade durante a refeição, fazendo com que seja mais fácil aumentar a quantidade de calorias consumidas sem perceber. Por outro lado, é um alimento pouco processado que possui minerais como ferro, cálcio, magnésio e potássio que ajuda a equilibrar a refeição."},
+                {"id": 16, "nome": "Pescada", "preco_unidade": 10, "imagem_endereco": "", "descricao": "A carne de pescada fresca é altamente valorizada na culinária devido ao seu baixo teor de gordura e baixa contagem de ossos. As carcaças decapitadas e sem cabeça deste peixe são fritas, cozidas e cozidas em fornos. Além disso, com base no filé de pescada preparar sopas, costeletas, saladas e recheio de cozimento. Parte da carne vai para a fabricação de farinha de peixe."},
+                {"id": 17, "nome": "Macarrão", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É um tipo de massa alimentícia com o formato de tubos curtos, em que se incluem os penne e os cotovelos.[2]. No entanto, em algumas regiões do Brasil, o termo 'macarrão' é usado para se referir a qualquer tipo de massa alimentícia, desde o espaguete às letras e outras formas usadas em vários cozidos e sopas."},
+                {"id": 18, "nome": "Salada de Alface", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É consumida em todos os cantos do país por ter um sabor refrescante, ela é perfeita para o clima tropical do Brasil. É aliado de quem quer emagrecer, ajuda no sistema imunológico, faz bem para os olhos, melhora o funcionamento do intestino, tem efeito calmante, ajuda na hidratação, diminui a pressão arterial."},
+                {"id": 19, "nome": "Batata Frita", "preco_unidade": 10, "imagem_endereco": "", "descricao": "Refere-se ao produto da preparação culinária de batatas cortadas previamente em tiras, palitos finíssimos (batata palha), rodelas ou folhas e, posteriormente, fritas."},
+                {"id": 20, "nome": "Torta de camarão", "preco_unidade": 10, "imagem_endereco": "", "descricao": "Além do camarão ser extremamente delicioso, ele tem características no combate à artrite e à artrose graças à glicosamina. A substância é o ciente na restrição da velocidade do processo de desgaste das articulações, melhorando o estado geral e a qualidade de vida das pessoas com artrose. Mas para que o alimento não perca suas características, o mais recomendado é cozinhá-lo no vapor ou somente aquecê-lo no forno, sem fritar. O camarão contêm proteína de alto valor biológico, ou as chamadas proteínas completas, aquelas com todos os aminoácidos de que o corpo precisa. Ótima fonte de ômega-3, a gordura que previne doenças cardiovasculares, hipertensão e câncer. Sua constituição apresenta, em média, 40% de ácidos graxos poli-insaturados e 20% de monoinsaturados. Sem exageros, portanto, já que tem mais de 30% de gordura saturada e colesterol."},
+                {"id": 21, "nome": "Acarajé", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É um bolinho leva ingredientes com alto valor nutritivo, como o feijão fradinho, rico em ferro, cálcio e potássio, e o azeite de dendê, que contém antioxidantes, como as vitaminas A e E, que evitam o envelhecimento precoce e combatem os radicais livres, causadores de lesões nas células"},
+                {"id": 22, "nome": "Bife acebolado", "preco_unidade": 10, "imagem_endereco": "", "descricao": "A carne bovina traz vários benefícios para a saúde se for consumida da maneira certa. Esse alimento é muito rico em proteína, mas tem ainda outros nutrientes como vitaminas do complexo B e sais minerais. Fonte de Ferro, Zinco, Fósforo, Potássio, Magnésio e Selênio"},
+                {"id": 23, "nome": "Bife à cavalo", "preco_unidade": 10, "imagem_endereco": "", "descricao": "é um prato da culinária portuguesa e brasileira, composto basicamente por um bife, com um ovo em cima, tipicamente acompanhado de batatas fritas e, por vezes, de salada"},
+                {"id": 24, "nome": "Fígado frito", "preco_unidade": 10, "imagem_endereco": "", "descricao": "Os benefícios proporcionados pelo fígado bovino não param por aí: a carne ainda possui riboflavina, selênio, cobre e zinco, e mesmo com um grau de colesterol e gorduras saturadas considerado elevado, o fígado oferece, em apenas 100 gramas, 50% das proteínas e vitaminas que o organismo humano precisa consumir diariamente."},
+                {"id": 25, "nome": "Purê de batata", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É um purê feito com batatas cozidas e outros ingredientes, dentre eles margarina (ou manteiga), ovo e leite. Sua consistência é variável, variando do quase líquida ao mais consistente. É um típico acompanhamento para outros pratos, geralmente à base de carne ou peixe."},
+                {"id": 26, "nome": "Lasanha", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É tanto um tipo de massa alimentícia formada por fitas largas, como também um prato, por vezes chamado lasanha ao forno, feito com essas fitas colocadas em camadas, e entremeadas com recheio (queijo, carne moída ou outros) e molho.["},
                 {"id": 27, "nome": "Frango empanado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 28, "nome": "Prato feito", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
+                {"id": 28, "nome": "Prato feito", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É uma refeição que é montada segundo o gosto do dono do restaurante e não segundo o gosto do cliente. Na culinária brasileira atual, consiste muitas vezes em arroz, feijão, macarrão, algum tipo de carne (bife, frango, linguiça calabresa, filé de peixe ou mesmo ovo), salada (alface, tomate e cebola) batatas fritas. Por ser relativamente barato, é muito servido e apreciado em restaurantes de padrão médio e baixo, além de bares."},
                 {"id": 29, "nome": "Farofa de Carne de Sol", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 30, "nome": "Sardinha frita", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 31, "nome": "Vatapá", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
-                {"id": 32, "nome": "Pirão de peixe", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
+                {"id": 31, "nome": "Vatapá", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É um prato típico da culinária afro-brasileira. O seu preparo pode incluir pão molhado ou farinha de rosca, fubá, gengibre, pimenta-malagueta, amendoim, cravo, castanha de caju, leite desnatado, azeite de oliva, cebola, alho e tomate. Pode ser preparado com camarões frescos inteiros, ou secos e moídos, com peixe, com bacalhau ou com carne de frango, acompanhados de arroz. A sua consistência é cremosa."},
+                {"id": 32, "nome": "Pirão de peixe", "preco_unidade": 10, "imagem_endereco": "", "descricao": "É uma papa um tanto grossa feita de farinha de mandioca (Sergipe produz a melhor do Brasil) quando se mistura esta com água ou caldo quente. O pirão tem origem no Brasil e Angola (não se sabe onde primeiro) pode ser preparado com diferentes tipos de caldos com a mistura da farinha de mandioca com a água em que foram cozidos peixes, por exemplo, formando uma papa viscosa que é comida como acompanhamento do prato principal. O termo pirão é do tupi guarani e significa papa grossa."},
                 {"id": 33, "nome": "Tambaqui assado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 34, "nome": "Vinagrete", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 35, "nome": "Arroz carreteiro", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
@@ -48,8 +47,7 @@
                 {"id": 44, "nome": "Filé Mignon Grelhado", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 45, "nome": "Arroz com jabá", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""}
              ]
-        },
-        {
+            ,
             "bebidas": [
                 {"id": 46, "nome": "Pão de queijo", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 47, "nome": "Bolo de Fubá", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
@@ -66,8 +64,7 @@
                 {"id": 58, "nome": "Pizza Calabresa", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 59, "nome": "Pizza Mussarela", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""}
             ] 
-        },
-        {
+            ,
             "sobremesas": [
                 {"id": 60, "nome": "Vinho do porto", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 61, "nome": "Sakê", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
@@ -85,9 +82,7 @@
                 {"id": 73, "nome": "Suco de laranja", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""},
                 {"id": 74, "nome": "Água de coco", "preco_unidade": 10, "imagem_endereco": "", "descricao": ""}
              ]
-        }
-       
-    ],
+    },
     "carrinho": [],
     "pedidos_realizados": []
 
