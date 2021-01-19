@@ -6,7 +6,7 @@ import './Card.css'
 
 export default function Card() {
 
-      // ver:  https://medium.com/@pylnata/import-and-preloading-of-bunch-of-images-in-react-app-c82068d26247
+      
 
       
 
