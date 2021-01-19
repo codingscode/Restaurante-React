@@ -29,7 +29,6 @@
 }
 
 .painel--geral_meio {
-   height: 80vh;
    font-family: 'Open Sans Bold';
    font-size: 18px;
    
@@ -38,7 +37,7 @@
 .painel--geral_meio > * {
    padding-left: 20px;
    padding-top: 20px;
-   bottom: 0;
+   /* bottom: 0; */
 }
 
 .titulo {

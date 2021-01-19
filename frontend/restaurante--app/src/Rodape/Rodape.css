@@ -1,11 +1,14 @@
 .rodape_base {
-    position: relative;
+   /*  position: relative; */
     height: 60px;
     width: 100%;
     background-color: lightblue;
     font-size: 21px;
     color: #FFF;
-   
+    flex-direction: column;
+
+
+    
 }
 
 .rodape_inf1 {
@@ -16,7 +19,5 @@
 }
 
 
-footer {
-    bottom: 0;
-}
+
 
