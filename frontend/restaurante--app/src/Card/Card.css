@@ -1,8 +1,12 @@
 .card--base {
     height: auto;
     position: relative;
+    
 
+}
 
+.card--base > * {
+    font-size: 20px;
 }
 
 .imagem {
@@ -12,8 +16,23 @@
     
 }
 
+.quantidade span {
+    padding: 0.7px 7px;
+    height: 30px;
+    margin: 0px;
+    background-color: #FFF;
+    border: 1px solid black;
+}
 
-
+.quantidade button {
+    height: 30px;
+    margin: auto;
+    background-color: lightgreen;
+    padding: 10px 8px;
+    border: 1px solid black;
+    outline: none;
+    text-align: center;
+}
 
 
 
