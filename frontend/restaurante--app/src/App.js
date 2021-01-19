@@ -4,6 +4,7 @@ import Rodape from './Rodape/Rodape'
 import Card from './Card/Card'
 
 
+
 export default function App() {
 
       
@@ -34,7 +35,7 @@ export default function App() {
                     <Card />
                     <Card />
                     <Card />
-                                        
+                    
                 </div>
                 
             </div>
