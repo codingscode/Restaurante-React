@@ -9,6 +9,10 @@
     font-size: 20px;
 }
 
+.card--base button {
+    margin: 16px auto;
+}
+
 .imagem {
     height: 100px;
     width: 60%;
