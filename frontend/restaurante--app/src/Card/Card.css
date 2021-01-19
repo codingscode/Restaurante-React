@@ -1,3 +1,30 @@
 .card--base {
-    height: 130px;
+    height: auto;
+    position: relative;
+
+
 }
+
+.imagem {
+    height: 100px;
+    width: 60%;
+    margin: 30px auto 13px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
