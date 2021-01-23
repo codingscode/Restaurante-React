@@ -26,8 +26,8 @@ export default function Card({id, nome, preco_unidade, imagem, descricao}) {
           <div className="card--base">
               <img src={`./images/${imagem}`} alt={imagem} className="imagem" />
               <div>Nome: {nome}</div>
-              <div>Preço: {preco_unidade}</div>
-              <div>Descrição: {descricao}</div>
+              <div>Preço: R$ {preco_unidade}</div>
+              <div>Descrição: {descricao.substr(0, 150)}...</div>
               <div className="quantidade">
                    Quantidade: <span>{quantidade}</span>
                   
