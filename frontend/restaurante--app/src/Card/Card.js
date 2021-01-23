@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Card.css'
 
-/* import * as k from '../images' */
 
 
-export default function Card() {
+export default function Card({id, nome, preco_unidade, imagem, descricao}) {
 
       const [quantidade, setQuantidade] = useState(0)
       
-      let imagem1 = 'sardinha.jpg'
-      
+           
       
 
       function valorQuantidade(operacao) {
@@ -26,10 +24,10 @@ export default function Card() {
 
       return (
           <div className="card--base">
-              <img src={`./images/${imagem1}`} alt="sardinha" className="imagem" />
-              <div>Nome: </div>
-              <div>Preço: </div>
-              <div>Descrição: </div>
+              <img src={`./images/${imagem}`} alt={imagem} className="imagem" />
+              <div>Nome: {nome}</div>
+              <div>Preço: {preco_unidade}</div>
+              <div>Descrição: {descricao}</div>
               <div className="quantidade">
                    Quantidade: <span>{quantidade}</span>
                   
