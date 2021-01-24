@@ -9,32 +9,32 @@ import Carrinho from './Carrinho/Carrinho'
 
 
 function App() {
-     const [produtos, setProdutos] = useState({})
-     const [carregando, setCarregando] = useState(true)
-     let [carrinho, setCarrinho] = useState([])
-     const [cardClicado, setCardClicado] = useState(false)
+      const [produtos, setProdutos] = useState({})
+      const [carregando, setCarregando] = useState(true)
+      let [carrinho, setCarrinho] = useState([])
+      const [cardClicado, setCardClicado] = useState(false)
 
-    const link = 'http://localhost:8081'
+      const link = 'http://localhost:8081'
       
 
-    useEffect( () => {
-        console.log('começo')
+      useEffect( () => {
+          console.log('começo')
         
-        trazerdados(link, 'restaurante_produtos')
-                .then( (response) => { 
-                    setProdutos(response.data)
-                    setCarregando(false)
-                })
-                .catch(() => {
-                    console.log('Houve erro')
-                })
+          trazerdados(link, 'restaurante_produtos')
+                  .then( (response) => { 
+                      setProdutos(response.data)
+                      setCarregando(false)
+                  })
+                  .catch(() => {
+                      console.log('Houve erro')
+                  })
         
-        console.log('fim')
+          console.log('fim')
           
-    }, [])
+      }, [])
 
       function cardSelecionado() {
-         setCardClicado(true)
+          setCardClicado(true)
       }
     
       if (carregando) {
@@ -51,13 +51,30 @@ function App() {
       }
 
       function alteracoes(operacao, filtro) {
-         
-            if (operacao === 'remover') {
-                setCarrinho(carrinho.filter(cada => cada.imagem != filtro))
-                console.log('aqui ó', carrinho)
+          if (operacao === '+') {
+              setCarrinho(carrinho.map(cada => {
+                  if (cada.imagem == filtro) {
+                      cada = {...cada, quantidade: cada.quantidade += 1}
+                  }
+                  return cada
+              }))
+          }
+          if (operacao === '-') {
+              setCarrinho(carrinho.map(cada => {
+                  if (cada.imagem == filtro) {
+                      cada = {...cada, quantidade: cada.quantidade -= 1}
+                  }
+                  return cada
+              }))
+          }
+          if (operacao === 'remover') {
+              setCarrinho(carrinho.filter(cada => cada.imagem != filtro))
+              console.log('aqui ó', carrinho)
+          }
 
-            }
       }
+
+      
         
       console.log('---', carrinho)
 
@@ -87,7 +104,7 @@ function App() {
                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
-                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(valor) => alteracoes('remover', valor)} />
+                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(valor1, valor2) => alteracoes(valor2, valor1)} />
             </div>
             <Rodape />
         </div>
