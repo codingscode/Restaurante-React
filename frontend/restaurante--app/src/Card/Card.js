@@ -3,23 +3,33 @@ import './Card.css'
 
 
 
-export default function Card({id, nome, preco_unidade, imagem, descricao}) {
+export default function Card({id, nome, preco_unidade, imagem, descricao, resumo_ind}) {
 
       const [quantidade, setQuantidade] = useState(0)
+      const [carrinho, setCarrinho] = useState({})
       
-           
-      
-
+     
       function valorQuantidade(operacao) {
-          
           if (operacao === '+') {
               setQuantidade((q) => q += 1)
           }
           if (operacao === '-' && quantidade > 0) {
               setQuantidade((q) => q -= 1)
           }
-          
       }     
+     
+      
+      function meu_carrinho(imagem_r, nome_r, preco_r, quantidade) {
+          let id = 1
+
+          let carrinho = {imagem: imagem_r, nome: nome_r, quantidade: quantidade, valor: preco_r * quantidade}
+          id += 1
+          console.log(carrinho)
+          resumo_ind(carrinho)
+          /* resumo_ind.push(carrinho) */
+          return carrinho
+      }
+
       
 
       return (
@@ -34,7 +44,7 @@ export default function Card({id, nome, preco_unidade, imagem, descricao}) {
                    <button onClick={() => valorQuantidade('-')} >-</button>
                    <button onClick={() => valorQuantidade('+')} >+</button>
               </div>
-              <button>Adicionar</button>
+              <button onClick={() => meu_carrinho(imagem, nome, preco_unidade, quantidade)} >Adicionar</button>
           </div>
       )
 }
