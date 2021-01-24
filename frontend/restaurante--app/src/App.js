@@ -54,7 +54,7 @@ function App() {
           if (operacao === '+') {
               setCarrinho(carrinho.map(cada => {
                   if (cada.imagem == filtro) {
-                      cada = {...cada, quantidade: cada.quantidade += 1}
+                      cada = {...cada, quantidade: cada.quantidade += 1, valor: cada.preco * cada.quantidade}
                   }
                   return cada
               }))
@@ -62,7 +62,7 @@ function App() {
           if (operacao === '-') {
               setCarrinho(carrinho.map(cada => {
                   if (cada.imagem == filtro) {
-                      cada = {...cada, quantidade: cada.quantidade -= 1}
+                      cada = {...cada, quantidade: cada.quantidade -= 1, valor: cada.preco * cada.quantidade}
                   }
                   return cada
               }))
@@ -104,7 +104,7 @@ function App() {
                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
-                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(valor1, valor2) => alteracoes(valor2, valor1)} />
+                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(quem, operacao) => alteracoes(operacao, quem)} />
             </div>
             <Rodape />
         </div>

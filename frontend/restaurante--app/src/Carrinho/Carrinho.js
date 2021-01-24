@@ -3,12 +3,7 @@ import './Carrinho.css'
 
 
 export default function Carrinho({ resumo, clicado, funcao }) {
-     //const [listaPedidos, setListaPedidos] = useState([...resumo])
-
      
-     // cada => [...cada, item]
-     //setListaPedidos(cada => [...cada, resumo])
-     /* console.log(listaPedidos) */
      
 
      /* 
@@ -18,13 +13,7 @@ export default function Carrinho({ resumo, clicado, funcao }) {
      
      */
 
-     /* useEffect(() => {
-         setListaPedidos(cada => [...cada, resumo])
-     }, []) */
-
      
-
-      //console.log('listaPedidos:: ', listaPedidos)
 
 
      return (

@@ -37,7 +37,7 @@ font-family: 'Open Sans', sans-serif;
 
 removendo itens do carrinho
 
-
+atualizando quantidade e valor
 
 
 
