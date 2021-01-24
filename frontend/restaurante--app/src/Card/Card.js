@@ -22,7 +22,7 @@ export default function Card({id, nome, preco_unidade, imagem, descricao, resumo
       function meu_carrinho(imagem_r, nome_r, preco_r, quantidade) {
           let id = 1
 
-          let carrinho = {imagem: imagem_r, nome: nome_r, quantidade: quantidade, valor: preco_r * quantidade}
+          let carrinho = {imagem: imagem_r, nome: nome_r, quantidade: quantidade, preco: preco_r, valor: preco_r * quantidade}
           id += 1
           console.log(carrinho)
           resumo_ind(carrinho)
