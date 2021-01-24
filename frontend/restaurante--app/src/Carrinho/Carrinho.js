@@ -1,48 +1,62 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({resumo}) {
-    
-     console.log('%%%%%%%%', resumo)
- 
-     /* 
-        0: {imagem: "batata_frita.jpg", nome: "Batata Frita", quantidade: 1, preco: 8, valor: 8}
-        1: {imagem: "salada_alface.jpg", nome: "Salada de Alface", quantidade: 4, preco: 5, valor: 20}
-        2: {imagem: "farofa.jpg", nome: "Farofa", quantidade: 2, preco: 5, valor: 10}
-        3: {imagem: "feijao_preto.jpg", nome: "Feijão preto", quantidade: 1, preco: 8, valor: 8}
-        4: {imagem: "feijoada.jpg", nome: "Feijoada", quantidade: 1, preco: 11, valor: 11}
-        5: {imagem: "bisteca.jpg", nome: "Bisteca Assada", quantidade: 1, preco: 14, valor: 14}
+export default function Carrinho({ resumo, clicado, funcao }) {
+     //const [listaPedidos, setListaPedidos] = useState([...resumo])
+
      
+     // cada => [...cada, item]
+     //setListaPedidos(cada => [...cada, resumo])
+     /* console.log(listaPedidos) */
+     
+
+     /* 
+        0: {imagem: "vinho_porto.jpg", nome: "Vinho do porto", quantidade: 1, preco: 4, valor: 4}
+        1: {imagem: "agua_c.jpg", nome: "Água de coco", quantidade: 2, preco: 4.2, valor: 8.4}
+        2: {imagem: "caipirinha.jpg", nome: "Caipirinha", quantidade: 4, preco: 4.5, valor: 18}
      
      */
 
+     /* useEffect(() => {
+         setListaPedidos(cada => [...cada, resumo])
+     }, []) */
 
+     
 
-
-
+      //console.log('listaPedidos:: ', listaPedidos)
 
 
      return (
          <div className="carrinho--base">
              <div>Aqui é o carrinho</div>
              <div >
-                 {resumo.map(cada => (
-                      <div className="carrinho--pontos">
-                            <img src={`./images/${cada.imagem}`} alt={cada.imagem} className="imagem--carrinho" />
-                            <div>
-                                <div>nome: {cada.nome}</div>
-                                <div>valor: R$ {cada.preco}</div>
-                            </div>
-                            <div className="carrinho--quantidade">
-                                <div>1</div>
-                                <div>-</div>
-                                <div>+</div>
-                                <button>remover</button>
-                            </div>
-                      </div>
+                 {clicado ? 
+                 
+                 resumo.map(cada => (
+                    <div className="carrinho--pontos" key={cada.imagem} > {/* key={cada.imagem} */}
+                          <img src={`./images/${cada.imagem}`} alt={cada.imagem} className="imagem--carrinho" />
+                          <div>
+                              <div>nome: {cada.nome}</div>
+                              <div>valor: R$ {cada.valor}</div>
+                          </div>
+                          <div className="carrinho--quantidade">
+                              <div>{cada.quantidade}</div>
+                              <div>-</div>
+                              <div>+</div>
+                              <button onClick={() => funcao(cada.imagem)} >remover</button>
+                              {/* <button onClick={() => alteracoes('remover', cada.imagem)} >remover</button> */}
+                          </div>
+                    </div>
 
-                 ))}
+                ))
+                 
+                 :
+                 
+                 'nao'
+                 
+                 }
+                 
 
              </div>
              <div>Confirmar pedidos</div>

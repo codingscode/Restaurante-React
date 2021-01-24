@@ -19,11 +19,12 @@ export default function Card({id, nome, preco_unidade, imagem, descricao, resumo
       }     
      
       
-      function meu_carrinho(imagem_r, nome_r, preco_r, quantidade) {
-          let id = 1
+      function meu_carrinho(imagem_r, nome_r, preco_r, quantidade, clicado) {
+          
 
-          let carrinho = {imagem: imagem_r, nome: nome_r, quantidade: quantidade, preco: preco_r, valor: preco_r * quantidade}
-          id += 1
+          let carrinho = {id: id, imagem: imagem_r, nome: nome_r, quantidade: quantidade, preco: preco_r,
+                            valor: preco_r * quantidade, clicado: clicado}
+          
           console.log(carrinho)
           resumo_ind(carrinho)
           
@@ -43,7 +44,7 @@ export default function Card({id, nome, preco_unidade, imagem, descricao, resumo
                    <button onClick={() => valorQuantidade('-')} >-</button>
                    <button onClick={() => valorQuantidade('+')} >+</button>
               </div>
-              <button onClick={() => meu_carrinho(imagem, nome, preco_unidade, quantidade)} >Adicionar</button>
+              <button onClick={() => meu_carrinho(imagem, nome, preco_unidade, quantidade, true)} >Adicionar</button>
           </div>
       )
 }

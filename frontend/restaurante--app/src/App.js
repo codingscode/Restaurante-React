@@ -12,6 +12,7 @@ function App() {
      const [produtos, setProdutos] = useState({})
      const [carregando, setCarregando] = useState(true)
      let [carrinho, setCarrinho] = useState([])
+     const [cardClicado, setCardClicado] = useState(false)
 
     const link = 'http://localhost:8081'
       
@@ -32,7 +33,9 @@ function App() {
           
     }, [])
 
-    
+      function cardSelecionado() {
+         setCardClicado(true)
+      }
     
       if (carregando) {
           return (<div >Loading...</div>)
@@ -41,9 +44,19 @@ function App() {
       
       function colocar(item) {
           
-          setCarrinho(cada => [...cada, item])
 
+          setCarrinho(cada => [...cada, item])
+          setCardClicado(true)
           console.log('********', carrinho)
+      }
+
+      function alteracoes(operacao, filtro) {
+         
+            if (operacao === 'remover') {
+                setCarrinho(carrinho.filter(cada => cada.imagem != filtro))
+                console.log('aqui ó', carrinho)
+
+            }
       }
         
       console.log('---', carrinho)
@@ -57,21 +70,24 @@ function App() {
                 <div className="grid-container">
                    {produtos.comidas.map((cada) => <Card key={cada.id} id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} resumo_ind={(objeto) => colocar(objeto)} />)}
+                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
                 <div>Sobremesas</div>
                 <div className="grid-container">
                    {produtos.sobremesas.map((cada) => <Card key={cada.id} id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} resumo_ind={(objeto) => colocar(objeto)} />)}
+                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
                 <div>Bebidas</div>
                 <div className="grid-container">
                    {produtos.bebidas.map((cada) => <Card key={cada.id} id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} resumo_ind={(objeto) => colocar(objeto)} />)}
+                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
-                <Carrinho resumo={carrinho}/>
+                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(valor) => alteracoes('remover', valor)} />
             </div>
             <Rodape />
         </div>

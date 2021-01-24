@@ -35,6 +35,7 @@ font-family: 'Open Sans', sans-serif;
 </style>
 
 
+removendo itens do carrinho
 
 
 
