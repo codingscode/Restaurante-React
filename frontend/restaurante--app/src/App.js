@@ -52,7 +52,7 @@ function App() {
             <div className="painel--geral_meio">
                 <div className="titulo">Restaurante Panela de Barro</div>
                 <div className="grid-container">
-                   {produtos.comidas.map((cada) => <Card id={cada.id}
+                   {produtos.sobremesas.map((cada) => <Card id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
                                     imagem={cada.imagem_endereco} descricao={cada.descricao} />)}
                     
