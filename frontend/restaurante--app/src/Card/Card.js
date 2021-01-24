@@ -20,14 +20,12 @@ export default function Card({id, nome, preco_unidade, imagem, descricao, resumo
      
       
       function meu_carrinho(imagem_r, nome_r, preco_r, quantidade, clicado) {
-          
-
           let carrinho = {id: id, imagem: imagem_r, nome: nome_r, quantidade: quantidade, preco: preco_r,
                             valor: preco_r * quantidade, clicado: clicado}
-          
           console.log(carrinho)
-          resumo_ind(carrinho)
-          
+          if (carrinho.quantidade !== 0) {
+              resumo_ind(carrinho)
+          }
       }
 
       

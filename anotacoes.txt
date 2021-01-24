@@ -39,6 +39,7 @@ removendo itens do carrinho
 
 atualizando quantidade e valor
 
+evitar enviar item vazio
 
 
 

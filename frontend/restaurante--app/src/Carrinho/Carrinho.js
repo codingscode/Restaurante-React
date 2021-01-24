@@ -13,16 +13,24 @@ export default function Carrinho({ resumo, clicado, funcao }) {
      
      */
 
-     
+     function somaTotal(lista) {
+         let soma = 0
+         if (lista.length) {
+            lista.map(cada => {
+                soma += cada.valor
+            })
+            return soma
+         }
+         return soma
+     }
 
 
      return (
          <div className="carrinho--base">
              <div>Aqui é o carrinho</div>
              <div >
-                 {clicado ? 
-                 
-                 resumo.map(cada => (
+                {clicado ? 
+                resumo.map(cada => (
                     <div className="carrinho--pontos" key={cada.imagem} > {/* key={cada.imagem} */}
                           <img src={`./images/${cada.imagem}`} alt={cada.imagem} className="imagem--carrinho" />
                           <div>
@@ -34,21 +42,17 @@ export default function Carrinho({ resumo, clicado, funcao }) {
                               <div onClick={() => funcao(cada.imagem, '-')} >-</div>
                               <div onClick={() => funcao(cada.imagem, '+')} >+</div>
                               <button onClick={() => funcao(cada.imagem, 'remover')} >remover</button>
-                              {/* <button onClick={() => alteracoes('remover', cada.imagem)} >remover</button> */}
                           </div>
                     </div>
-
                 ))
-                 
-                 :
-                 
-                 'nao'
-                 
-                 }
-                 
-
+                :
+                'Seu carrinho está vazio'
+                }
              </div>
-             <div>Confirmar pedidos</div>
+             <div>
+                <div>Total: R$ {somaTotal(resumo)}</div>
+                <div>Confirmar pedidos</div>
+             </div>
          </div>
      )
 }
