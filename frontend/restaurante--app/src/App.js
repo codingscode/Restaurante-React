@@ -63,15 +63,15 @@ function App() {
                 <div className="grid-container">
                    {produtos.sobremesas.map((cada) => <Card key={cada.id} id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao}  />)}
+                                    imagem={cada.imagem_endereco} descricao={cada.descricao} resumo_ind={(objeto) => colocar(objeto)} />)}
                 </div>
                 <div>Bebidas</div>
                 <div className="grid-container">
                    {produtos.bebidas.map((cada) => <Card key={cada.id} id={cada.id}
                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao}  />)}
+                                    imagem={cada.imagem_endereco} descricao={cada.descricao} resumo_ind={(objeto) => colocar(objeto)} />)}
                 </div>
-                <Carrinho />
+                <Carrinho resumo={carrinho}/>
             </div>
             <Rodape />
         </div>

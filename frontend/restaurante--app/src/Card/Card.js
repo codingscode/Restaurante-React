@@ -26,8 +26,7 @@ export default function Card({id, nome, preco_unidade, imagem, descricao, resumo
           id += 1
           console.log(carrinho)
           resumo_ind(carrinho)
-          /* resumo_ind.push(carrinho) */
-          return carrinho
+          
       }
 
       

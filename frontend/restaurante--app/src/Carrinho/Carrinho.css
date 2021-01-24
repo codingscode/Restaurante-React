@@ -3,6 +3,40 @@
     width: 100%;
 }
 
+.imagem--carrinho {
+    height: 9%;
+    width: 9%;
+}
+
+.carrinho--pontos, .carrinho--quantidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carrinho--pontos > * {
+    margin-right: 25px;
+}
+
+.carrinho--quantidade > * {
+    margin-right: 10px;
+}
+
+.carrinho--quantidade > div {
+    border: 1px solid red;
+    width: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.carrinho--quantidade > button {
+    margin-left: 10px;
+}
+
+
+
 
 
 
