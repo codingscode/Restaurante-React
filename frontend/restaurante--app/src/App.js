@@ -63,7 +63,7 @@ function App() {
           }
           if (operacao === '-') {
               setCarrinho(carrinho.map(cada => {
-                  if (cada.imagem == filtro) {
+                  if ((cada.imagem == filtro) && cada.quantidade > 0) {
                       cada = {...cada, quantidade: cada.quantidade -= 1, valor: cada.preco * cada.quantidade}
                   }
                   return cada

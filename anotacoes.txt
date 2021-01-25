@@ -43,5 +43,5 @@ evitar enviar item vazio
 
 evitando colocar itens iguais
 
-
+evitando quantidade negativa no carrinho
 
