@@ -41,7 +41,7 @@ atualizando quantidade e valor
 
 evitar enviar item vazio
 
-
+evitando colocar itens iguais
 
 
 

@@ -43,11 +43,13 @@ function App() {
 
       
       function colocar(item) {
-          
-
-          setCarrinho(cada => [...cada, item])
-          setCardClicado(true)
-          console.log('********', carrinho)
+          if (carrinho.every(cada => cada.imagem !== item.imagem)) {
+             setCarrinho(cada => [...cada, item])
+             setCardClicado(true)
+             console.log('********', carrinho)
+             console.log('item:->', item)
+          }
+         
       }
 
       function alteracoes(operacao, filtro) {

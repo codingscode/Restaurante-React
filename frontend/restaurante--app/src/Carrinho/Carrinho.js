@@ -7,9 +7,10 @@ export default function Carrinho({ resumo, clicado, funcao }) {
      
 
      /* 
-        0: {imagem: "vinho_porto.jpg", nome: "Vinho do porto", quantidade: 1, preco: 4, valor: 4}
-        1: {imagem: "agua_c.jpg", nome: "Água de coco", quantidade: 2, preco: 4.2, valor: 8.4}
-        2: {imagem: "caipirinha.jpg", nome: "Caipirinha", quantidade: 4, preco: 4.5, valor: 18}
+        {clicado: true, id: 75, imagem: "vinho_porto.jpg", nome: "Vinho do porto", preco: 4, quantidade: 2, valor: 8} 
+        {clicado: true, id: 73, imagem: "s_laranja.jpg", nome: "Suco de laranja", preco: 3, quantidade: 1, valor: 3}
+                 
+       
      
      */
 
