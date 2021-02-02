@@ -112,7 +112,7 @@ function App() {
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
                 <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
-                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} />
+                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} />
                 <PedidosFeitos feitos={pedidosFeitos} />
             </div>
             <Rodape />

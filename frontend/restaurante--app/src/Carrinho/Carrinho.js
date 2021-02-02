@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado }) {
+export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar }) {
      
      
 
@@ -13,6 +13,10 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado }) 
        
      
      */
+
+     function limparCarrinho() {
+         limpar([])
+     }
 
      function somaTotal(lista) {
          let soma = 0
@@ -36,6 +40,7 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado }) 
          pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDay()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
          console.log('finalizados: \n', pedido)
          pedidofinalizado(pedido)
+         limparCarrinho()
      }
 
 
@@ -43,7 +48,7 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado }) 
          <div className="carrinho--base">
              <div>Aqui é o carrinho</div>
              <div >
-                {clicado ? 
+                {clicado && resumo.length ? 
                 resumo.map(cada => (
                     <div className="carrinho--pontos" key={cada.imagem} > {/* key={cada.imagem} */}
                           <img src={`./images/${cada.imagem}`} alt={cada.imagem} className="imagem--carrinho" />

@@ -45,3 +45,10 @@ evitando colocar itens iguais
 
 evitando quantidade negativa no carrinho
 
+esvaziando carrinho
+
+
+
+
+
+
