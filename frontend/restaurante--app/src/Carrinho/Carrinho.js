@@ -40,9 +40,9 @@ export default function Carrinho({ resumo, clicado, funcao }) {
                           </div>
                           <div className="carrinho--quantidade">
                               <div>{cada.quantidade}</div>
-                              <div onClick={() => funcao(cada.imagem, '-')} >-</div>
-                              <div onClick={() => funcao(cada.imagem, '+')} >+</div>
-                              <button onClick={() => funcao(cada.imagem, 'remover')} >remover</button>
+                              <div onClick={() => funcao('-', cada.imagem)} >-</div>
+                              <div onClick={() => funcao('+', cada.imagem, )} >+</div>
+                              <button onClick={() => funcao('remover', cada.imagem, )} >remover</button>
                           </div>
                     </div>
                 ))

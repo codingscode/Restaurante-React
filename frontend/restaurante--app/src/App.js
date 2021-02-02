@@ -3,8 +3,9 @@ import Cabecalho from './Cabecalho/Cabecalho'
 import Rodape from './Rodape/Rodape'
 import Card from './Card/Card'
 import { useEffect, useState } from 'react'
-import { trazerdados, valor } from './api.js'
+import { trazerdados } from './api.js'
 import Carrinho from './Carrinho/Carrinho'
+import PedidosFeitos from './Pedidos/Pedidos'
 
 
 
@@ -106,7 +107,8 @@ function App() {
                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
-                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(quem, operacao) => alteracoes(operacao, quem)} />
+                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)} />
+                <PedidosFeitos />
             </div>
             <Rodape />
         </div>
