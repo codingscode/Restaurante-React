@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({ resumo, clicado, funcao }) {
+export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado }) {
      
      
 
@@ -23,6 +23,19 @@ export default function Carrinho({ resumo, clicado, funcao }) {
             return soma
          }
          return soma
+     }
+
+     function confirmarPedido(lista) {
+         let pedido = []
+         let momento = new Date()
+         lista.map((cada) => {
+             let nome_valor = `${cada.nome} _____________ R$ ${cada.valor}`
+             pedido.push(`${nome_valor}`)
+             //pedido.push(`${nome_valor} \n`)
+         }) 
+         pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDay()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
+         console.log('finalizados: \n', pedido)
+         pedidofinalizado(pedido)
      }
 
 
@@ -52,7 +65,7 @@ export default function Carrinho({ resumo, clicado, funcao }) {
              </div>
              <div>
                 <div>Total: R$ {somaTotal(resumo)}</div>
-                <div>Confirmar pedidos</div>
+                <button onClick={() => confirmarPedido(resumo)} >Confirmar Itens</button>
              </div>
          </div>
      )

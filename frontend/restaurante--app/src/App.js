@@ -14,6 +14,8 @@ function App() {
       const [carregando, setCarregando] = useState(true)
       let [carrinho, setCarrinho] = useState([])
       const [cardClicado, setCardClicado] = useState(false)
+      const [pedidosFeitos, setPedidosFeitos] = useState([])
+
 
       const link = 'http://localhost:8081'
       
@@ -80,6 +82,8 @@ function App() {
       
         
       console.log('---', carrinho)
+      console.log('pedidosFeitos: ', pedidosFeitos)
+
 
       return (
         <div className="painel--geral">
@@ -107,8 +111,9 @@ function App() {
                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
-                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)} />
-                <PedidosFeitos />
+                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
+                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} />
+                <PedidosFeitos feitos={pedidosFeitos} />
             </div>
             <Rodape />
         </div>
