@@ -47,7 +47,7 @@ evitando quantidade negativa no carrinho
 
 esvaziando carrinho
 
-
+adicionado um pedido ao json via axios
 
 
 

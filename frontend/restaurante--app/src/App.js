@@ -3,7 +3,7 @@ import Cabecalho from './Cabecalho/Cabecalho'
 import Rodape from './Rodape/Rodape'
 import Card from './Card/Card'
 import { useEffect, useState } from 'react'
-import { trazerdados } from './api.js'
+import { trazerdados, setarDados } from './api.js'
 import Carrinho from './Carrinho/Carrinho'
 import PedidosFeitos from './Pedidos/Pedidos'
 
@@ -44,6 +44,11 @@ function App() {
           return (<div >Loading...</div>)
       }
 
+      function enviarPedido(confirmar) {
+          if (confirmar) {
+             setarDados(carrinho)
+          }
+      }
       
       function colocar(item) {
           if (carrinho.every(cada => cada.imagem !== item.imagem)) {
@@ -112,7 +117,7 @@ function App() {
                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
                 </div>
                 <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
-                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} />
+                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} enviar_pedido={(valor) => enviarPedido(valor)} />
                 <PedidosFeitos feitos={pedidosFeitos} />
             </div>
             <Rodape />

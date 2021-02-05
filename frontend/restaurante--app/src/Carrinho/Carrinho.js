@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar }) {
+export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar, enviar_pedido }) {
      
      
 
@@ -13,6 +13,13 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
        
      
      */
+
+     function enviar(pedido) {
+         if (pedido) {
+            return enviar_pedido(true)
+        }
+         return enviar_pedido(false)
+     }
 
      function limparCarrinho() {
          limpar([])
@@ -40,6 +47,7 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
          pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDay()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
          console.log('finalizados: \n', pedido)
          pedidofinalizado(pedido)
+         enviar(pedido)
          limparCarrinho()
      }
 
