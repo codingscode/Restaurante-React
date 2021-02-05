@@ -23,3 +23,10 @@
     background-color: navajowhite;
 }
 
+.pedidos--cada {
+    border: 1px solid blue;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
