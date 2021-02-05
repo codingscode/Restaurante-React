@@ -49,6 +49,7 @@ esvaziando carrinho
 
 adicionado um pedido ao json via axios
 
+adicionado mais de um pedido (consertando)
 
 
 

@@ -527,34 +527,92 @@
   },
   "carrinho": [],
   "pedidos_realizados": [
-    [
-      {
-        "id": 75,
-        "imagem": "vinho_porto.jpg",
-        "nome": "Vinho do porto",
-        "quantidade": 1,
-        "preco": 4,
-        "valor": 4,
-        "clicado": true
-      },
-      {
-        "id": 74,
-        "imagem": "agua_c.jpg",
-        "nome": "Água de coco",
-        "quantidade": 1,
-        "preco": 4.2,
-        "valor": 4.2,
-        "clicado": true
-      },
-      {
-        "id": 69,
-        "imagem": "guara_ama.jpg",
-        "nome": "Guaraná da Amazônia (copo)",
-        "quantidade": 2,
-        "preco": 8.5,
-        "valor": 17,
-        "clicado": true
-      }
-    ]
+    {
+      "valor": [
+        {
+          "id": 1,
+          "imagem": "arroz.jpg",
+          "nome": "Arroz",
+          "quantidade": 1,
+          "preco": 5,
+          "valor": 5,
+          "clicado": true
+        },
+        {
+          "id": 2,
+          "imagem": "feijao_preto.jpg",
+          "nome": "Feijão preto",
+          "quantidade": 1,
+          "preco": 8,
+          "valor": 8,
+          "clicado": true
+        },
+        {
+          "id": 8,
+          "imagem": "bisteca.jpg",
+          "nome": "Bisteca Assada",
+          "quantidade": 1,
+          "preco": 14,
+          "valor": 14,
+          "clicado": true
+        }
+      ],
+      "id": 1
+    },
+    {
+      "valor": [
+        {
+          "id": 75,
+          "imagem": "vinho_porto.jpg",
+          "nome": "Vinho do porto",
+          "quantidade": 1,
+          "preco": 4,
+          "valor": 4,
+          "clicado": true
+        },
+        {
+          "id": 74,
+          "imagem": "agua_c.jpg",
+          "nome": "Água de coco",
+          "quantidade": 1,
+          "preco": 4.2,
+          "valor": 4.2,
+          "clicado": true
+        },
+        {
+          "id": 73,
+          "imagem": "s_laranja.jpg",
+          "nome": "Suco de laranja",
+          "quantidade": 1,
+          "preco": 3,
+          "valor": 3,
+          "clicado": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "valor": [
+        {
+          "id": 56,
+          "imagem": "bol_mac.jpg",
+          "nome": "Bolo de macaxeira",
+          "quantidade": 1,
+          "preco": 5,
+          "valor": 5,
+          "clicado": true
+        },
+        {
+          "id": 47,
+          "imagem": "bol_fub.jpg",
+          "nome": "Bolo de Fubá",
+          "quantidade": 2,
+          "preco": 5,
+          "valor": 10,
+          "clicado": true
+        }
+      ],
+      "id": 3
+    }
   ]
 }
