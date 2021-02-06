@@ -1,9 +1,9 @@
 .cabecalho_base {
     /*  position: relative; */
-     height: 60px;
+     height: 80px;
      width: 100%;
-     background-color: chocolate;
-     font-size: 21px;
+     background-color:chocolate;
+     font-size: 24px;
      color: #FFF;
      align-content: center;
      margin: 0;
@@ -13,12 +13,20 @@
      
 }
 
+.cabecalho_base img {
+     height: 60px;
+     width: 80px;
+     
+     padding: 10px;
+}
+
 .cabecalho_inf1 {
      position: relative;
      left: 10px;
      padding: 30px auto 20px auto;
      border: 1px solid white;
      float: right;
+     top: 20px;
 }
 
 .cabecalho_inf1 > * {
@@ -26,10 +34,16 @@
      margin: 10px 6px;
 }
 
+li > *:hover {
+     color: lightgreen;
+}
+
+
+
 li > * {
      color: white;
      text-decoration: none;
-     
+     transition: all 0.3s ease-in-out;
 }
 
 

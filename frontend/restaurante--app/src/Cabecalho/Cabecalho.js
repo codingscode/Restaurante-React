@@ -9,30 +9,22 @@ export default function Cabecalho() {
 
       return (
           <nav className="cabecalho_base">
-                
+             <img src="./images/food.svg" alt="icone" />   
              <ul className="cabecalho_inf1">
-              <li>
+                <li>
                   <Link to="/">Início</Link>
-              </li>
-              <li>
+                </li>
+                <li>
                   <Link to="/cardapio">Ver Cardápio</Link>
-              </li>
-              <li>
+                </li>
+                <li>
                   <Link to="/carrinho">Carrinho</Link>
-              </li>
-              <li>
+                </li>
+                <li>
                   <Link to="/pedidos">Pedidos</Link>
-              </li>      
+                </li>      
              </ul>    
-                                  
-                  
           </nav>
       )
 }
 
-{/* <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div> */}
