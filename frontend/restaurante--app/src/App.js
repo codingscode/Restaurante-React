@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { trazerdados, setarDados } from './api.js'
 import Carrinho from './Carrinho/Carrinho'
 import PedidosFeitos from './Pedidos/Pedidos'
+import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom'
 
 
 
@@ -63,7 +64,7 @@ function App() {
       function alteracoes(operacao, filtro) {
           if (operacao === '+') {
               setCarrinho(carrinho.map(cada => {
-                  if (cada.imagem == filtro) {
+                  if (cada.imagem === filtro) {
                       cada = {...cada, quantidade: cada.quantidade += 1, valor: cada.preco * cada.quantidade}
                   }
                   return cada
@@ -71,14 +72,14 @@ function App() {
           }
           if (operacao === '-') {
               setCarrinho(carrinho.map(cada => {
-                  if ((cada.imagem == filtro) && cada.quantidade > 0) {
+                  if ((cada.imagem === filtro) && cada.quantidade > 0) {
                       cada = {...cada, quantidade: cada.quantidade -= 1, valor: cada.preco * cada.quantidade}
                   }
                   return cada
               }))
           }
           if (operacao === 'remover') {
-              setCarrinho(carrinho.filter(cada => cada.imagem != filtro))
+              setCarrinho(carrinho.filter(cada => cada.imagem !== filtro))
               console.log('aqui ó', carrinho)
           }
 
@@ -91,37 +92,47 @@ function App() {
 
 
       return (
-        <div className="painel--geral">
-            <Cabecalho />
-            <div className="painel--geral_meio">
-                <div className="titulo">Restaurante Panela de Barro</div>
-                <div>Comidas</div>
-                <div className="grid-container">
-                   {produtos.comidas.map((cada) => <Card key={cada.id} id={cada.id}
-                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
-                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
-                </div>
-                <div>Sobremesas</div>
-                <div className="grid-container">
-                   {produtos.sobremesas.map((cada) => <Card key={cada.id} id={cada.id}
-                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
-                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
-                </div>
-                <div>Bebidas</div>
-                <div className="grid-container">
-                   {produtos.bebidas.map((cada) => <Card key={cada.id} id={cada.id}
-                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
-                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
-                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
-                </div>
-                <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
-                          pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} enviar_pedido={(valor) => enviarPedido(valor)} />
-                <PedidosFeitos feitos={pedidosFeitos} />
+        <Router>
+            <div className="painel--geral">
+                <Cabecalho  />
+                <Switch>
+                    <div className="painel--geral_meio">
+                        <div className="titulo">Restaurante Panela de Barro</div>
+                        <Route path="/cardapio" >
+                            <div>Comidas</div>
+                            <div className="grid-container">
+                                {produtos.comidas.map((cada) => <Card key={cada.id} id={cada.id}
+                                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
+                                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
+                            </div>
+                            <div>Sobremesas</div>
+                            <div className="grid-container">
+                                {produtos.sobremesas.map((cada) => <Card key={cada.id} id={cada.id}
+                                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
+                                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
+                            </div>
+                            <div>Bebidas</div>
+                            <div className="grid-container">
+                                {produtos.bebidas.map((cada) => <Card key={cada.id} id={cada.id}
+                                                    nome={cada.nome} preco_unidade={cada.preco_unidade}
+                                                    imagem={cada.imagem_endereco} descricao={cada.descricao} 
+                                                    resumo_ind={(objeto) => colocar(objeto)}  />)}
+                            </div>
+                        </Route>
+                        <Route path="/carrinho" >
+                            <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
+                                        pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} enviar_pedido={(valor) => enviarPedido(valor)} />
+                        </Route>
+                        <Route path="/pedidos" >
+                            <PedidosFeitos feitos={pedidosFeitos} />
+                        </Route>
+                    </div>
+                </Switch>
+                <Rodape />
             </div>
-            <Rodape />
-        </div>
+        </Router>
       )
 }
 

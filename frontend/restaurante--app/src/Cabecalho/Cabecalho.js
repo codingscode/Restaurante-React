@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cabecalho.css'
+import { Link } from 'react-router-dom'
 
 
 
@@ -7,19 +8,31 @@ export default function Cabecalho() {
 
 
       return (
-          <header className="cabecalho_base">
-                <div className="cabecalho_inf1">
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-                        <div className="cabecalho_inf2">meu cabeçalho</div>
-
-                </div>
+          <nav className="cabecalho_base">
                 
+             <ul className="cabecalho_inf1">
+              <li>
+                  <Link to="/">Início</Link>
+              </li>
+              <li>
+                  <Link to="/cardapio">Ver Cardápio</Link>
+              </li>
+              <li>
+                  <Link to="/carrinho">Carrinho</Link>
+              </li>
+              <li>
+                  <Link to="/pedidos">Pedidos</Link>
+              </li>      
+             </ul>    
+                                  
                   
-          </header>
+          </nav>
       )
 }
 
+{/* <div className="cabecalho_inf2">meu cabeçalho</div>
+                        <div className="cabecalho_inf2">meu cabeçalho</div>
+                        <div className="cabecalho_inf2">meu cabeçalho</div>
+                        <div className="cabecalho_inf2">meu cabeçalho</div>
+                        <div className="cabecalho_inf2">meu cabeçalho</div>
+                        <div className="cabecalho_inf2">meu cabeçalho</div> */}

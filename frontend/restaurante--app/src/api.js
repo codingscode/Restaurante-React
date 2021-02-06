@@ -8,6 +8,6 @@ export async function trazerdados(fonte, sessao) {
     return await axios.get(`${fonte}/${sessao}`)
 }
 
-export async function setarDados(valor) {
-    return await axios.post('http://localhost:8081/pedidos_realizados', {valor})
+export async function setarDados(pedido) {
+    return await axios.post('http://localhost:8081/pedidos_realizados', { pedido })
 }

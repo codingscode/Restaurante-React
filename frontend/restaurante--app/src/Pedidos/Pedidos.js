@@ -14,8 +14,8 @@ export default function PedidosFeitos({ feitos }) {
              
              <div className="pedidos--tela--individual">
                 {feitos.map((cada, indice) => (
-                    <div className="pedidos--cada">
-                        <div key={indice}>Pedido número {indice + 1} :</div>
+                    <div className="pedidos--cada" key={indice} >
+                        <div>Pedido número {indice + 1} :</div>
                         {cada.map((cada2, indice2) => (
                            <div key={indice2}>
                                {cada2}

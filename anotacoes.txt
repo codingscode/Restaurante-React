@@ -52,4 +52,18 @@ adicionado um pedido ao json via axios
 adicionado mais de um pedido (consertando)
 
 
+https://reactrouter.com/web/guides/quick-start
+
+no terminal:
+       npm install react-router-dom
+
+
+adicionando rotas
+
+
+
+
+
+
+
 
