@@ -1,10 +1,9 @@
 import React from 'react'
 import './Cabecalho.css'
-import { Link } from 'react-router-dom'
 
 
 
-export default function Cabecalho() {
+export default function Cabecalho({ Link }) {
 
 
       return (

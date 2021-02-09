@@ -60,6 +60,7 @@ no terminal:
 
 adicionando rotas
 
+trazendo pedidos via rotas.  (ficar apertando f5, pois não atualiza de uma vez)
 
 
 

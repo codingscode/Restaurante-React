@@ -24,13 +24,21 @@ function App() {
       useEffect( () => {
           console.log('começo')
         
-          trazerdados(link, 'restaurante_produtos')
+          trazerdados('http://localhost:8081', 'restaurante_produtos')
                   .then( (response) => { 
                       setProdutos(response.data)
                       setCarregando(false)
                   })
                   .catch(() => {
                       console.log('Houve erro')
+                  })
+
+          trazerdados('http://localhost:8081', 'pedidos_realizados')
+                  .then(resp => {
+                      setPedidosFeitos(resp.data)
+                  })
+                  .catch(() => {
+                      console.log('Erro em Pedidos feitos')
                   })
         
           console.log('fim')
@@ -45,9 +53,9 @@ function App() {
           return (<div >Loading...</div>)
       }
 
-      function enviarPedido(confirmar) {
+      function enviarPedido(confirmar, pedido) {
           if (confirmar) {
-             setarDados(carrinho)
+             setarDados(pedido)
           }
       }
       
@@ -94,11 +102,11 @@ function App() {
       return (
         <Router>
             <div className="painel--geral">
-                <Cabecalho  />
+                <Cabecalho Link={Link} />
                 <Switch>
                     <div className="painel--geral_meio">
                         <div className="titulo">Restaurante Panela de Barro</div>
-                        <Route path="/cardapio" >
+                        <Route exact path="/cardapio" >
                             <div>Comidas</div>
                             <div className="grid-container">
                                 {produtos.comidas.map((cada) => <Card key={cada.id} id={cada.id}
@@ -123,7 +131,8 @@ function App() {
                         </Route>
                         <Route path="/carrinho" >
                             <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
-                                        pedidofinalizado={(pedido) => setPedidosFeitos([...pedidosFeitos, pedido])} limpar={(valor) => setCarrinho(valor)} enviar_pedido={(valor) => enviarPedido(valor)} />
+                                        pedidofinalizado={(confirmar, pedido) => enviarPedido(confirmar, pedido)} 
+                                        limpar={(valor) => setCarrinho(valor)} /* enviar_pedido={(valor) => enviarPedido(valor)} */ />
                         </Route>
                         <Route path="/pedidos" >
                             <PedidosFeitos feitos={pedidosFeitos} />

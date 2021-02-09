@@ -529,158 +529,47 @@
   "pedidos_realizados": [
     {
       "pedido": [
-        {
-          "id": 75,
-          "imagem": "vinho_porto.jpg",
-          "nome": "Vinho do porto",
-          "quantidade": 1,
-          "preco": 4,
-          "valor": 4,
-          "clicado": true
-        },
-        {
-          "id": 74,
-          "imagem": "agua_c.jpg",
-          "nome": "Água de coco",
-          "quantidade": 1,
-          "preco": 4.2,
-          "valor": 4.2,
-          "clicado": true
-        },
-        {
-          "id": 69,
-          "imagem": "guara_ama.jpg",
-          "nome": "Guaraná da Amazônia (copo)",
-          "quantidade": 1,
-          "preco": 8.5,
-          "valor": 8.5,
-          "clicado": true
-        },
-        {
-          "id": 70,
-          "imagem": "caipirinha.jpg",
-          "nome": "Caipirinha",
-          "quantidade": 1,
-          "preco": 4.5,
-          "valor": 4.5,
-          "clicado": true
-        }
+        "Arroz _____________ R$ 5",
+        "Feijão preto _____________ R$ 8",
+        "momento : 18:7:44 2/2/2021"
       ],
       "id": 1
     },
     {
       "pedido": [
-        {
-          "id": 7,
-          "imagem": "feijao_t.jpg",
-          "nome": "Feijão tropeiro",
-          "quantidade": 1,
-          "preco": 10,
-          "valor": 10,
-          "clicado": true
-        },
-        {
-          "id": 8,
-          "imagem": "bisteca.jpg",
-          "nome": "Bisteca Assada",
-          "quantidade": 1,
-          "preco": 14,
-          "valor": 14,
-          "clicado": true
-        },
-        {
-          "id": 9,
-          "imagem": "peixe_p.jpg",
-          "nome": "Peixe Pedra Frito",
-          "quantidade": 1,
-          "preco": 14,
-          "valor": 14,
-          "clicado": true
-        },
-        {
-          "id": 11,
-          "imagem": "salada_g.jpg",
-          "nome": "Salada Grega",
-          "quantidade": 1,
-          "preco": 6,
-          "valor": 6,
-          "clicado": true
-        }
+        "Feijão tropeiro _____________ R$ 10",
+        "Salada Grega _____________ R$ 6",
+        "Peito de Frango Assado _____________ R$ 8",
+        "momento : 18:8:3 2/2/2021"
       ],
       "id": 2
     },
     {
       "pedido": [
-        {
-          "id": 7,
-          "imagem": "feijao_t.jpg",
-          "nome": "Feijão tropeiro",
-          "quantidade": 1,
-          "preco": 10,
-          "valor": 10,
-          "clicado": true
-        },
-        {
-          "id": 19,
-          "imagem": "batata_frita.jpg",
-          "nome": "Batata Frita",
-          "quantidade": 1,
-          "preco": 8,
-          "valor": 8,
-          "clicado": true
-        },
-        {
-          "id": 24,
-          "imagem": "figado.jpg",
-          "nome": "Fígado frito",
-          "quantidade": 1,
-          "preco": 12.3,
-          "valor": 12.3,
-          "clicado": true
-        }
+        "Caldo de Cana _____________ R$ 4",
+        "Água mineral _____________ R$ 4",
+        "Sakê _____________ R$ 5.7",
+        "momento : 18:9:37 2/2/2021"
       ],
       "id": 3
     },
     {
       "pedido": [
-        {
-          "id": 7,
-          "imagem": "feijao_t.jpg",
-          "nome": "Feijão tropeiro",
-          "quantidade": 1,
-          "preco": 10,
-          "valor": 10,
-          "clicado": true
-        },
-        {
-          "id": 26,
-          "imagem": "lasanha.jpg",
-          "nome": "Lasanha",
-          "quantidade": 1,
-          "preco": 10,
-          "valor": 10,
-          "clicado": true
-        },
-        {
-          "id": 36,
-          "imagem": "costela.jpg",
-          "nome": "Costela assada",
-          "quantidade": 1,
-          "preco": 15.6,
-          "valor": 15.6,
-          "clicado": true
-        },
-        {
-          "id": 51,
-          "imagem": "pacoca.jpg",
-          "nome": "Paçoca de Amendoim",
-          "quantidade": 1,
-          "preco": 4,
-          "valor": 4,
-          "clicado": true
-        }
+        "Vinho do porto _____________ R$ 4",
+        "Água de coco _____________ R$ 4.2",
+        "Suco de laranja _____________ R$ 3",
+        "momento : 18:11:29 2/2/2021"
       ],
       "id": 4
+    },
+    {
+      "pedido": [
+        "Pão de queijo _____________ R$ 3",
+        "Canjica _____________ R$ 4",
+        "Brigadeiro _____________ R$ 6",
+        "momento : 18:12:17 2/2/2021"
+      ],
+      "id": 5
     }
   ]
 }

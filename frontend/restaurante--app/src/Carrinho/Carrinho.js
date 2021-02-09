@@ -46,8 +46,8 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
          }) 
          pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDay()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
          console.log('finalizados: \n', pedido)
-         pedidofinalizado(pedido)
-         enviar(pedido)
+         pedidofinalizado(true, pedido)
+         //enviar(pedido)
          limparCarrinho()
      }
 

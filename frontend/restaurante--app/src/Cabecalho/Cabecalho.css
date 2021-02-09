@@ -16,8 +16,13 @@
 .cabecalho_base img {
      height: 60px;
      width: 80px;
-     
      padding: 10px;
+     transition: all 0.3s ease;
+}
+
+.cabecalho_base img:hover {
+     height: 65px;
+     width: 85px;
 }
 
 .cabecalho_inf1 {
@@ -27,6 +32,7 @@
      border: 1px solid white;
      float: right;
      top: 20px;
+     width: auto;
 }
 
 .cabecalho_inf1 > * {
@@ -37,7 +43,6 @@
 li > *:hover {
      color: lightgreen;
 }
-
 
 
 li > * {
