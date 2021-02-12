@@ -7,6 +7,8 @@ import { trazerdados, setarDados } from './api.js'
 import Carrinho from './Carrinho/Carrinho'
 import PedidosFeitos from './Pedidos/Pedidos'
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom'
+import Modal from './Modal/Modal'
+import UsarModal from './Modal/UsarModal'
 
 
 
@@ -16,9 +18,7 @@ function App() {
       let [carrinho, setCarrinho] = useState([])
       const [cardClicado, setCardClicado] = useState(false)
       const [pedidosFeitos, setPedidosFeitos] = useState([])
-
-
-      const link = 'http://localhost:8081'
+      const { estaMostrando, toggle } = UsarModal()
       
 
       useEffect( () => {
@@ -33,16 +33,20 @@ function App() {
                       console.log('Houve erro')
                   })
 
-          trazerdados('http://localhost:8081', 'pedidos_realizados')
-                  .then(resp => {
-                      setPedidosFeitos(resp.data)
-                  })
-                  .catch(() => {
-                      console.log('Erro em Pedidos feitos')
-                  })
+          
         
           console.log('fim')
           
+      }, [])
+
+      useEffect( () => {
+            trazerdados('http://localhost:8081', 'pedidos_realizados')
+                .then(resp => {
+                    setPedidosFeitos(resp.data)
+                })
+                .catch(() => {
+                    console.log('Erro em Pedidos feitos')
+                })
       }, [])
 
       function cardSelecionado() {
@@ -100,6 +104,7 @@ function App() {
 
 
       return (
+        <>
         <Router>
             <div className="painel--geral">
                 <Cabecalho Link={Link} />
@@ -132,7 +137,7 @@ function App() {
                         <Route path="/carrinho" >
                             <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
                                         pedidofinalizado={(confirmar, pedido) => enviarPedido(confirmar, pedido)} 
-                                        limpar={(valor) => setCarrinho(valor)} /* enviar_pedido={(valor) => enviarPedido(valor)} */ />
+                                        limpar={(valor) => setCarrinho(valor)} toggle={toggle} />
                         </Route>
                         <Route path="/pedidos" >
                             <PedidosFeitos feitos={pedidosFeitos} />
@@ -142,6 +147,8 @@ function App() {
                 <Rodape />
             </div>
         </Router>
+        <Modal estaMostrando={estaMostrando} esconder={toggle} />
+        </>
       )
 }
 

@@ -529,47 +529,31 @@
   "pedidos_realizados": [
     {
       "pedido": [
-        "Arroz _____________ R$ 5",
-        "Feijão preto _____________ R$ 8",
-        "momento : 18:7:44 2/2/2021"
+        "Feijão carioca _____________ R$ 9",
+        "Carneiro Assado _____________ R$ 16",
+        "Salada de Alface _____________ R$ 5",
+        "momento : 21:37:38 11/2/2021"
       ],
       "id": 1
     },
     {
       "pedido": [
-        "Feijão tropeiro _____________ R$ 10",
-        "Salada Grega _____________ R$ 6",
-        "Peito de Frango Assado _____________ R$ 8",
-        "momento : 18:8:3 2/2/2021"
+        "Arroz carreteiro _____________ R$ 9",
+        "Tainha na Taquara _____________ R$ 16",
+        "Bolo de Fubá _____________ R$ 5",
+        "Paçoca de Amendoim _____________ R$ 4",
+        "momento : 22:13:26 11/2/2021"
       ],
       "id": 2
     },
     {
       "pedido": [
-        "Caldo de Cana _____________ R$ 4",
-        "Água mineral _____________ R$ 4",
-        "Sakê _____________ R$ 5.7",
-        "momento : 18:9:37 2/2/2021"
+        "Bife à cavalo _____________ R$ 16.7",
+        "Acarajé _____________ R$ 13",
+        "Suco de laranja _____________ R$ 3",
+        "momento : 22:14:1 11/2/2021"
       ],
       "id": 3
-    },
-    {
-      "pedido": [
-        "Vinho do porto _____________ R$ 4",
-        "Água de coco _____________ R$ 4.2",
-        "Suco de laranja _____________ R$ 3",
-        "momento : 18:11:29 2/2/2021"
-      ],
-      "id": 4
-    },
-    {
-      "pedido": [
-        "Pão de queijo _____________ R$ 3",
-        "Canjica _____________ R$ 4",
-        "Brigadeiro _____________ R$ 6",
-        "momento : 18:12:17 2/2/2021"
-      ],
-      "id": 5
     }
   ]
 }

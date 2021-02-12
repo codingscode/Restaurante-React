@@ -62,6 +62,7 @@ adicionando rotas
 
 trazendo pedidos via rotas.  (ficar apertando f5, pois não atualiza de uma vez)
 
+janela pop em carrinho. fazer melhorias com efeitos css.
 
 
 

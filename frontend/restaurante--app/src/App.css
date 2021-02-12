@@ -2,7 +2,7 @@
     margin: 0;
     position: relative;
     box-sizing: border-box;
-    
+    font-family: 'Open Sans Regular';
     /* border: 6px solid pink; */
 }
 
@@ -44,6 +44,7 @@
     text-align: center;
     border: 2px solid blue;
     padding-bottom: 30px;
+    font-family: 'Open Sans Bold';
 }
 
 .grid-container {

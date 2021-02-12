@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar, enviar_pedido }) {
+export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar, toggle }) {
      
      
 
@@ -14,12 +14,6 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
      
      */
 
-     function enviar(pedido) {
-         if (pedido) {
-            return enviar_pedido(true)
-        }
-         return enviar_pedido(false)
-     }
 
      function limparCarrinho() {
          limpar([])
@@ -44,17 +38,16 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
              pedido.push(`${nome_valor}`)
              //pedido.push(`${nome_valor} \n`)
          }) 
-         pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDay()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
+         pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDate()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
          console.log('finalizados: \n', pedido)
          pedidofinalizado(true, pedido)
-         //enviar(pedido)
+         toggle()
          limparCarrinho()
      }
 
 
      return (
          <div className="carrinho--base">
-             <div>Aqui é o carrinho</div>
              <div >
                 {clicado && resumo.length ? 
                 resumo.map(cada => (
@@ -77,6 +70,7 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
                 }
              </div>
              <div>
+                <div></div><br></br>
                 <div>Total: R$ {somaTotal(resumo)}</div>
                 <button onClick={() => confirmarPedido(resumo)} >Confirmar Itens</button>
              </div>

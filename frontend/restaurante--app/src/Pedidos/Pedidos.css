@@ -15,6 +15,12 @@
     padding-left: 15px;
 }
 
+.titulo1 {
+    background-color: white;
+    height: 55px;
+    
+}
+
 .pedidos--base:not(:last-child) {
     margin-bottom: 10px;
 }
