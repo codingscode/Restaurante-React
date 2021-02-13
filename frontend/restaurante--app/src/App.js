@@ -9,6 +9,7 @@ import PedidosFeitos from './Pedidos/Pedidos'
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom'
 import Modal from './Modal/Modal'
 import UsarModal from './Modal/UsarModal'
+import styled from 'styled-components'
 
 
 
@@ -33,21 +34,19 @@ function App() {
                       console.log('Houve erro')
                   })
 
-          
+          trazerdados('http://localhost:8081', 'pedidos_realizados')
+                  .then(resp => {
+                      setPedidosFeitos(resp.data)
+                  })
+                  .catch(() => {
+                      console.log('Erro em Pedidos feitos')
+                  })
         
           console.log('fim')
           
       }, [])
 
-      useEffect( () => {
-            trazerdados('http://localhost:8081', 'pedidos_realizados')
-                .then(resp => {
-                    setPedidosFeitos(resp.data)
-                })
-                .catch(() => {
-                    console.log('Erro em Pedidos feitos')
-                })
-      }, [])
+      
 
       function cardSelecionado() {
           setCardClicado(true)
@@ -102,6 +101,21 @@ function App() {
       console.log('---', carrinho)
       console.log('pedidosFeitos: ', pedidosFeitos)
 
+      const GradeContainer = styled.div`
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          grid-gap: 10px;
+          background-color: #ffe284;
+          padding: 10px;
+          & > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid ${cardClicado ? 'blue' : 'chocolate'} ;  
+            text-align: center;
+            font-size: 30px;
+            border-radius: 10px;    
+          }
+      `
+
 
       return (
         <>
@@ -113,26 +127,26 @@ function App() {
                         <div className="titulo">Restaurante Panela de Barro</div>
                         <Route exact path="/cardapio" >
                             <div>Comidas</div>
-                            <div className="grid-container">
+                            <GradeContainer>
                                 {produtos.comidas.map((cada) => <Card key={cada.id} id={cada.id}
                                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
                                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
-                            </div>
+                            </GradeContainer>
                             <div>Sobremesas</div>
-                            <div className="grid-container">
+                            <GradeContainer>
                                 {produtos.sobremesas.map((cada) => <Card key={cada.id} id={cada.id}
                                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
                                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
-                            </div>
+                            </GradeContainer>
                             <div>Bebidas</div>
-                            <div className="grid-container">
+                            <GradeContainer>
                                 {produtos.bebidas.map((cada) => <Card key={cada.id} id={cada.id}
                                                     nome={cada.nome} preco_unidade={cada.preco_unidade}
                                                     imagem={cada.imagem_endereco} descricao={cada.descricao} 
                                                     resumo_ind={(objeto) => colocar(objeto)}  />)}
-                            </div>
+                            </GradeContainer>
                         </Route>
                         <Route path="/carrinho" >
                             <Carrinho resumo={carrinho} clicado={cardClicado} funcao={(operacao, quem) => alteracoes(operacao, quem)}
