@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
 
-export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, limpar, toggle }) {
+export default function Carrinho({ resumo, funcao, pedidofinalizado, limpar, toggle }) {
      
      
 
@@ -49,7 +49,7 @@ export default function Carrinho({ resumo, clicado, funcao, pedidofinalizado, li
      return (
          <div className="carrinho--base">
              <div >
-                {clicado && resumo.length ? 
+                {resumo.length ? 
                 resumo.map(cada => (
                     <div className="carrinho--pontos" key={cada.imagem} > {/* key={cada.imagem} */}
                           <img src={`./images/${cada.imagem}`} alt={cada.imagem} className="imagem--carrinho" />

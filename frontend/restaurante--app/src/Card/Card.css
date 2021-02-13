@@ -2,7 +2,7 @@
     height: auto;
     position: relative;
     padding: 20px;
-    
+    transition: all 0.5s ease-out;
 }
 
 .card--base > * {
