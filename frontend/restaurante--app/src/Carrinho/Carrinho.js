@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useEffect, useState } from 'react'
 import './Carrinho.css'
 
@@ -24,6 +25,7 @@ export default function Carrinho({ resumo, funcao, pedidofinalizado, limpar, tog
          if (lista.length) {
             lista.map(cada => {
                 soma += cada.valor
+                return ''
             })
             return soma
          }
@@ -37,6 +39,7 @@ export default function Carrinho({ resumo, funcao, pedidofinalizado, limpar, tog
              let nome_valor = `${cada.nome} _____________ R$ ${cada.valor}`
              pedido.push(`${nome_valor}`)
              //pedido.push(`${nome_valor} \n`)
+             return ''
          }) 
          pedido.push(`momento : ${momento.getHours()}:${momento.getMinutes()}:${momento.getSeconds()} ${momento.getDate()}/${momento.getMonth()+1}/${momento.getFullYear()}`)
          console.log('finalizados: \n', pedido)

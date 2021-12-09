@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { trazerdados, setarDados } from './api.js'
 import Carrinho from './Carrinho/Carrinho'
 import PedidosFeitos from './Pedidos/Pedidos'
+// eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom'
 import Modal from './Modal/Modal'
 import UsarModal from './Modal/UsarModal'

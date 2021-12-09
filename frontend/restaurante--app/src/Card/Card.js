@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useEffect, useState } from 'react'
 import './Card.css'
 /* import styled from 'styled-components' */
@@ -7,6 +8,7 @@ import './Card.css'
 export default function Card({id, nome, preco_unidade, imagem, descricao, resumo_ind}) {
 
       const [quantidade, setQuantidade] = useState(0)
+      // eslint-disable-next-line
       const [carrinho, setCarrinho] = useState({})
       const [clicado, setClicado] = useState(false)
       
